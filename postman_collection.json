@@ -1,0 +1,74 @@
+{
+  "info": {
+    "name": "Vista API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Company",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Vista Tech\",\n  \"registrationNumber\": \"REG-001\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "http://localhost:3000/companies",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["companies"]
+        }
+      }
+    },
+    {
+      "name": "List Companies",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/companies",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["companies"]
+        }
+      }
+    },
+    {
+      "name": "Create Service",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"companyId\": 1,\n  \"name\": \"Web Development\",\n  \"description\": \"Custom website builds\",\n  \"price\": 1500\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "http://localhost:3000/services",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["services"]
+        }
+      }
+    },
+    {
+      "name": "Get Service by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/services/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["services", "1"]
+        }
+      }
+    }
+  ]
+}
