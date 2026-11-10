@@ -1,5 +1,7 @@
 # Back-end Test Vista
 
+Open http://localhost:3000 for a home page with clickable links to the API.
+
 REST API for managing companies and their services.
 
 **Tech stack:** Node.js, TypeScript, Express.js, Prisma ORM, MySQL
