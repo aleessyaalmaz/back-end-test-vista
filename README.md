@@ -103,3 +103,14 @@ Import `postman_collection.json` (in the project root) into Postman to try all e
 - Prisma schema with a one-to-many relation (Company has many Services)
 
 ## Project
+
+## Run with Docker
+
+Requires Docker Desktop. This starts MySQL and the API together and applies the migrations automatically:
+
+```bash
+docker compose up --build
+```
+
+The API runs at http://localhost:3000. Stop it with `Ctrl + C`, or `docker compose down`.
+(Stop any local `npm run dev` first, since both use port 3000.)
